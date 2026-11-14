@@ -15,7 +15,7 @@ def update_product_menu(product: dict, products_list: list) -> None:
             case 1:
                 product["name"] = get_string("Enter product name:")
             case 2:
-                product["name"] = get_product_category()
+                product["category"] = get_product_category()
             case 3:
                 product["price"] = get_positive_number("Enter product price:")
             case 4:
@@ -24,4 +24,4 @@ def update_product_menu(product: dict, products_list: list) -> None:
                 update_done = True
             case _:
                 not_valid_choice("1 - 5")
-        print_products(list(product))        
+        print_products([product])        

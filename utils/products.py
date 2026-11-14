@@ -6,6 +6,7 @@ from prints.errors import print_error
 
 
 def genarate_product_id()-> int:
+    global ID_COUNTER
     ID_COUNTER += 1
     return ID_COUNTER
 
@@ -19,4 +20,4 @@ def get_search_key():
             valid_key = True
         except ValueError as error:
             print_error(error)
-
+    return key

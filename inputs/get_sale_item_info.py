@@ -28,4 +28,4 @@ def get_valid_id(products: list):
                         valid_product = True
                 except ValueError as error:
                         print_error(error)
-        return result
+        return result[0]["id"]

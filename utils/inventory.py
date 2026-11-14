@@ -1,5 +1,5 @@
 def filter_active_products(products_list: list)-> list:
-    return list(filter(lambda p: p["active"]))
+    return list(filter(lambda p: p["active"], products_list))
 
 
 def filter_products_in_stock(products_list: list)-> list:

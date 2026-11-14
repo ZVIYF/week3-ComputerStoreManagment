@@ -3,6 +3,12 @@ from validation_errors.inventory import valid_amount_to_reduce
 from prints.sales import print_quantity_failure
 
 
+def get_product_by_id(products: list, product_id: int):
+    for p in products:
+        if p["id"] == product_id:
+            return p
+
+
 def get_sale_item_by_id(sale:dict, item_id: int)-> dict:
     for item in sale["items"]:
         if item["product_id"] == item_id:
@@ -18,7 +24,7 @@ def check_products_stock(products: list, sale: dict):
     for item in sale["items"]:
         product_id = item["product_id"]
         quantity = item["quantity"]
-        product = search_product_by_id(product_id)[0]
+        product = get_product_by_id(products, product_id)
         try:
             valid_amount_to_reduce(product["stock"], quantity)
             return True
@@ -31,7 +37,7 @@ def update_products_stock(products: list, sale: dict):
     for item in sale["items"]:
         product_id = item["product_id"]
         quantity = item["quantity"]
-        product = search_product_by_id(product_id)[0]
+        product = get_product_by_id(products, product_id)
         product["stock"] -= quantity
 
 

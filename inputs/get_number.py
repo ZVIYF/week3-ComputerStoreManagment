@@ -29,11 +29,11 @@ def get_integer(messege: str)-> int:
 
 def get_positive_number(messege: str)-> float:
     is_positive = False
-    while not is_positive_number:
+    while not is_positive:
         number = get_number(messege)
         try:
             valid_positive_number(number)
-            is_positive_number = True
+            is_positive = True
         except ValueError as error:
             print_error(error)
     return number
@@ -48,5 +48,6 @@ def get_positive_integer(messege: str):
             is_positive = True
         except ValueError as error:
             print_error(error)
+    return integer
 
 

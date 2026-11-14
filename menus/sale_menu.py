@@ -11,7 +11,7 @@ def sale_menu(sales: list, products: list):
     sale = create_sale_object(sales)
     active_products = filter_active_products(products)
     print_sale_header()
-    sale_complete = True
+    sale_complete = False
     while not sale_complete:
         print_sale_menu()
         choice = get_menu_choice()

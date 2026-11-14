@@ -51,7 +51,7 @@ def print_sale_summary(sale: dict):
     
     print("--------------------------------------------")
     print(f"Subtotal:\t\t\t {sale["subtotal"]}")
-    print(f"Discount:\t\t\t {sale["discount"]}")
+    print(f"Discount:\t\t\t {sale["discount"]} %")
     print(f"Total:\t\t\t\t {sale["total"]}")
 
 def print_sale_completed():

@@ -21,5 +21,5 @@ def reduce_inventory(products_list: list):
         valid_amount_to_reduce(product["stock"], amount_to_reduce)
     except ValueError as error:
         print_error(error)
-
+        return
     product["stock"] -= amount_to_reduce

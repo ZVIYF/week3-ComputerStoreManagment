@@ -7,14 +7,23 @@ def print_product(product: dict)-> None:
     print(f"| \t{product["id"]}\t|  {product["name"].ljust(25)} |  {product["price"]}\t |  {product["stock"]}\t\t |  {product["active"]}\t|")
 
 
+def print_single_product(product):
+    print_products_header()
+    print_product(product)
+
+
+def print_products_header():
+    print(f"=========================================================================================")
+    print(f"| product ID\t|  Name                      |  Price\t |  Stock\t |  Active \t|")
+    print(f"|===============|============================|===========|===============|==============|")
+
+
 def print_products(products_list: list[dict])-> None:
+    print_products_header()
     if not products_list:
         print("\nNo results!\n")
         return
     
-    print(f"=========================================================================================")
-    print(f"| product ID\t|  Name                      |  Price\t |  Stock\t |  Active \t|")
-    print(f"|===============|============================|===========|===============|==============|")
     for p in products_list:
         print_product(p)
     print(f"=========================================================================================")

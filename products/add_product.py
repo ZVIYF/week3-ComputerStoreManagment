@@ -1,10 +1,10 @@
 from inputs.get_product_info import gather_product_inputs
-from prints.products import print_product
+from prints.products import print_single_product
 from utils.products import genarate_product_id
 
 def add_product(products_list: list)-> None:
     product = create_product_object(products_list)
-    print_product(product)
+    print_single_product(product)
     products_list.append(product)
 
 

@@ -5,7 +5,7 @@ from prints.errors import print_error
 
 
 def sales_revenue(sales: list):
-    print_header("5 BEST SELLERS")
+    print_header("TOTAL REVENUE")
     try:
         valid_sales(sales)
     except TypeError as error:
