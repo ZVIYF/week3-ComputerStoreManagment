@@ -1,0 +1,4 @@
+PRODUCTS = []
+
+
+ID_COUNTER = 0
